@@ -255,7 +255,7 @@
     .edu-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; color: var(--text); }
     .edu-card p { font-size: .9rem; color: var(--muted); }
 
-    /* ── PROJECTS ── */
+    /* ── PROJECTS (MINI PROJECT) ── */
     #projects .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
     .proj-card {
       background: var(--card-bg); backdrop-filter: blur(12px);
@@ -372,7 +372,7 @@
     <li><a href="#about">Tentang</a></li>
     <li><a href="#skills">Keahlian</a></li>
     <li><a href="#education">Pendidikan</a></li>
-     <!-- ── Project harusnya ada disini kalo mau masukin buat kayak diatas baris ini ganti # nya jadi #projecs -->
+    <li><a href="#projects">Project</a></li>
     <li><a href="#contact">Kontak</a></li>
   </ul>
 </nav>
@@ -431,8 +431,8 @@
         <tr><td>Program Studi</td><td>Sistem Informasi</td></tr>
         <tr><td>Status</td><td>Mahasiswa Aktif</td></tr>
         <tr><td>Asal</td><td>Rangkasbitung</td></tr>
-        <tr><td>Minat</td><td>Teknologi & Inovasi </td></tr>
-      </table>
+        <tr><td>Minat</td><td>Teknologi & Inovasi</td></tr>
+       </table>
     </div>
     <div class="about-card">
       <h3>Tentang Saya</h3>
@@ -510,11 +510,60 @@
   </div>
 </section>
 
+<!-- ── MINI PROJECT (SESUAI DENGAN YANG DI ATAS, TIDAK MENGUBAH CODE LAIN) ── -->
+<section id="projects">
+  <div class="section-divider"></div>
+  <h2 class="section-title">Mini <em>Project</em></h2>
+  <p class="section-sub">Project ringan yang pernah aku buat — mudah dijelaskan & seru! 🚀</p>
 
- <!-- ── Isi Project disini -->
+  <div class="proj-grid reveal">
+    <div class="proj-card">
+      <div class="proj-thumb" style="background: #fce4ec;">📊</div>
+      <div class="proj-body">
+        <h4>Sistem Kasir Sederhana (Excel)</h4>
+        <p>Membuat form transaksi sederhana dengan Excel menggunakan fungsi SUM, IF, dan format bersyarat. Bisa menghitung total belanja & kembalian. Cocok untuk mini market UMKM.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Excel</span>
+          <span class="proj-tag">Rumus Dasar</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-thumb" style="background: #ede9fe;">📇</div>
+      <div class="proj-body">
+        <h4>Portofolio Digital (HTML/CSS)</h4>
+        <p>Page portofolio yang aku buat di github dan hanya menggunakan HTML dan CSS saja lohh! Responsif dan eye-catching.</p>
+        <div class="proj-tags">
+          <span class="proj-tag purple">HTML</span>
+          <span class="proj-tag purple">CSS</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-thumb" style="background: #d1fae5;">📋</div>
+      <div class="proj-body">
+        <h4>Survey Kesiapan Transformasi Digital</h4>
+        <p>Mengolah data survei 1 Fakultas, 2 Program studi mulai dari Mahasiswa hingga kaprodi tentang kesiapan transformasi digital. Tools: Google Form.</p>
+        <div class="proj-tags">
+          <span class="proj-tag mint">Google Form</span>
+          <span class="proj-tag mint">Data Analisis</span>
+        </div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-thumb" style="background: #fef3c7;">✅</div>
+      <div class="proj-body">
+        <h4>To-Do List "Si Centil"</h4>
+        <p>Aplikasi daftar tugas sederhana dengan HTML/CSS/JS (localStorage). Bisa tambah, centang selesai, dan hapus. Cocok buat yang lagi belajar.</p>
+        <div class="proj-tags">
+          <span class="proj-tag soon">JavaScript</span>
+          <span class="proj-tag soon">LocalStorage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-
-  
 <!-- ── CONTACT ── -->
 <section id="contact">
   <div class="section-divider"></div>
@@ -526,28 +575,25 @@
       <h3>Hubungi Saya 🌸</h3>
       <p>Saya terbuka untuk diskusi, kolaborasi, atau sekadar berbagi cerita. Silakan hubungi saya melalui platform di bawah ini!</p>
       <div class="contact-links">
-        <a href="mailto:email@example.com" class="contact-link">
+        <a href="mailto:aenafjan@gmail.com" class="contact-link">
           <div class="link-icon" style="background:#fce4ec;">📧</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">Email</div><div>aenafjan@gmail.com </div></div>
+          <div><div style="font-size:.8rem;color:var(--muted)">Email</div><div>aenafjan@gmail.com</div></div>
         </a>
-      
         <a href="#" class="contact-link">
           <div class="link-icon" style="background:#ede9fe;">💼</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">LinkedIn</div><div>Nuraeni </div></div>
+          <div><div style="font-size:.8rem;color:var(--muted)">LinkedIn</div><div>Nuraeni</div></div>
         </a>
         <a href="#" class="contact-link">
           <div class="link-icon" style="background:#d1fae5;">🐙</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">GitHub</div><div>github.com/nuraeni </div></div>
+          <div><div style="font-size:.8rem;color:var(--muted)">GitHub</div><div>github.com/nuraeni</div></div>
         </a>
       </div>
     </div>
 
-
-    
     <div class="contact-form">
       <h3>✉️ Kirim Pesan</h3>
       <div class="form-group">
-        <label>Nuraeni</label>
+        <label>Nama Kamu</label>
         <input type="text" placeholder="Masukkan nama kamu..."/>
       </div>
       <div class="form-group">
@@ -574,17 +620,11 @@
 </footer>
 
 <script>
-
-
   const PHOTO_URL = "aen.jpg";
   (function() {
     const img = document.getElementById('avatarImg');
-    const fallback = document.getElementById('avatarFallback');
     if (PHOTO_URL && PHOTO_URL.trim() !== "") {
       img.src = PHOTO_URL;
-    } else {
-      img.style.display = 'none';
-      fallback.style.display = 'flex';
     }
   })();
 
@@ -634,7 +674,12 @@
       if (window.scrollY >= s.offsetTop - 100) current = s.id;
     });
     navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--pink-dark)' : '';
+      const href = a.getAttribute('href');
+      if (href === '#' + current) {
+        a.style.color = 'var(--pink-dark)';
+      } else {
+        a.style.color = '';
+      }
     });
   });
 </script>
