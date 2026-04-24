@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio — Nuraeni</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet"/>
@@ -207,7 +207,6 @@
     .info-table tr td { padding: .45rem 0; font-size: .92rem; vertical-align: top; }
     .info-table tr td:first-child { color: var(--muted); width: 42%; font-weight: 500; }
     .info-table tr td:last-child { color: var(--text); font-weight: 600; }
-    .badge-menyusul { display: inline-block; background: #fef3c7; color: #b45309; font-size: .75rem; font-weight: 700; padding: .15rem .6rem; border-radius: 6px; letter-spacing: .04em; }
 
     /* ── SKILLS ── */
     #skills .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.5rem; }
@@ -228,12 +227,9 @@
     .skill-bar::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 12px; background: rgba(255,255,255,.5); border-radius: 4px; }
     .bar-pink   { background: linear-gradient(90deg, var(--pink-dark), #f4a7b9); }
     .bar-purple { background: linear-gradient(90deg, #9333ea, var(--lavender)); }
-    .bar-mint   { background: linear-gradient(90deg, #059669, var(--mint)); }
-    .bar-yellow { background: linear-gradient(90deg, #d97706, #fde68a); }
     .skill-percent { font-size: .78rem; color: var(--muted); text-align: right; margin-top: .35rem; }
-    .tag-soon { display: inline-flex; align-items: center; gap: .3rem; background: #fef3c7; color: #b45309; font-size: .75rem; font-weight: 700; padding: .25rem .7rem; border-radius: 8px; }
 
-    /* ── EDUCATION UPDATED (LENGKAP DENGAN SD, SMP, SMK DKV) ── */
+    /* ── EDUCATION TIMELINE YANG DIPERBAIKI ── */
     #education .edu-timeline { position: relative; padding-left: 2.5rem; }
     #education .edu-timeline::before {
       content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
@@ -342,7 +338,6 @@
       #hero { flex-direction: column-reverse; gap: 2rem; padding-top: 7rem; text-align: center; }
       .hero-btns { justify-content: center; }
       .hero-avatar { width: 240px; height: 240px; }
-      .avatar-emoji { font-size: 7rem; }
       #about .about-grid { grid-template-columns: 1fr; }
       #contact .contact-wrap { grid-template-columns: 1fr; }
       nav { padding: .9rem 1.2rem; }
@@ -396,7 +391,7 @@
   <div class="hero-avatar">
     <div class="avatar-ring"></div>
     <div class="avatar-circle" id="avatarCircle">
-      <img id="avatarImg" class="avatar-photo" src="aen.jpg" alt="aen" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';" onload="this.style.display='block'; document.getElementById('avatarFallback').style.display='none';" />
+      <img id="avatarImg" class="avatar-photo" src="aen.jpg" alt="aen" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\"font-size:5rem;\">🌸</div>';" />
     </div>
     <div class="avatar-dot dot-1"></div>
     <div class="avatar-dot dot-2"></div>
@@ -470,28 +465,23 @@
   </div>
 </section>
 
-<!-- ── EDUCATION (TIMELINE YANG DIPERBARUI DENGAN SD, SMP, SMK DKV) ── -->
+<!-- ── EDUCATION (TIMELINE DENGAN URUTAN YANG BENAR: SD → SMP → SMK → KULIAH) ── -->
 <section id="education">
   <div class="section-divider"></div>
   <h2 class="section-title">Riwayat <em>Pendidikan</em></h2>
   <p class="section-sub">Perjalanan akademik saya dari dasar hingga perguruan tinggi 🌱</p>
-    <!-- Universitas (lanjutan) -->
+
+  <div class="edu-timeline reveal">
+    <!-- SDN 1 Bojong Leles -->
     <div class="edu-item">
       <div class="edu-card">
-        <span class="edu-year">2024 — Sekarang</span>
-        <h4>Sistem Informasi</h4>
-        <p>Universitas La Tansa Mashiro — Aktif menjalani perkuliahan, menggabungkan ilmu desain dengan teknologi informasi untuk solusi masa depan.</p>
+        <span class="edu-year">2012 — 2018</span>
+        <h4>SD Negeri 1 Bojong Leles</h4>
+        <p>Menyelesaikan pendidikan dasar dengan fondasi yang kuat dan mulai mengenal dunia literasi & numerasi.</p>
       </div>
     </div>
-    <!-- SMKN 1 Rangkasbitung - Jurusan DKV -->
-    <div class="edu-item">
-      <div class="edu-card">
-        <span class="edu-year">2021 — 2024</span>
-        <h4>SMK Negeri 1 Rangkasbitung — DKV (Desain Komunikasi Visual)</h4>
-        <p>Mendalami dunia desain grafis, tipografi, ilustrasi, dan branding. Memperkuat kreativitas serta visual thinking yang berguna dalam dunia digital.</p>
-      </div>
-    </div>
- <!-- SMPN 2 Cibadak -->
+
+    <!-- SMPN 2 Cibadak -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2018 — 2021</span>
@@ -499,15 +489,25 @@
         <p>Masa remaja yang penuh pengalaman, aktif dalam kegiatan ekstrakurikuler dan mulai tertarik pada teknologi & desain.</p>
       </div>
     </div>
-   <div class="edu-timeline reveal">
-    <!-- SDN 1 Bojong Leles -->
+
+    <!-- SMKN 1 Rangkasbitung - Jurusan DKV (Desain Komunikasi Visual) -->
     <div class="edu-item">
       <div class="edu-card">
-        <span class="edu-year">20012 — 2018</span>
-        <h4>SD Negeri 1 Bojong Leles</h4>
-        <p>Menyelesaikan pendidikan dasar dengan fondasi yang kuat dan mulai mengenal dunia literasi & numerasi.</p>
+        <span class="edu-year">2021 — 2024</span>
+        <h4>SMK Negeri 1 Rangkasbitung — DKV (Desain Komunikasi Visual)</h4>
+        <p>Mendalami dunia desain grafis, tipografi, ilustrasi, dan branding. Memperkuat kreativitas serta visual thinking yang berguna dalam dunia digital.</p>
       </div>
     </div>
+
+    <!-- Universitas La Tansa Mashiro -->
+    <div class="edu-item">
+      <div class="edu-card">
+        <span class="edu-year">2024 — Sekarang</span>
+        <h4>Sistem Informasi</h4>
+        <p>Universitas La Tansa Mashiro — Aktif menjalani perkuliahan, menggabungkan ilmu desain dengan teknologi informasi untuk solusi masa depan.</p>
+      </div>
+    </div>
+
     <!-- Sertifikasi & pelatihan -->
     <div class="edu-item">
       <div class="edu-card">
