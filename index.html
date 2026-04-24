@@ -507,352 +507,161 @@ footer span { color: var(--pink-dark); font-weight: 700; }
       </p>
     </div>
   </div>
-</sectionify-content: center; font-size: 1.4rem; }
-    .skill-card h4 { font-size: 1rem; font-weight: 700; color: var(--text); }
-    .skill-card p { font-size: .84rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
-    .skill-bar-wrap { height: 8px; background: #f3e8f7; border-radius: 4px; overflow: hidden; }
-    .skill-bar { height: 100%; border-radius: 4px; position: relative; }
-    .skill-bar::after { content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 12px; background: rgba(255,255,255,.5); border-radius: 4px; }
-    .bar-pink   { background: linear-gradient(90deg, var(--pink-dark), #f4a7b9); }
-    .bar-purple { background: linear-gradient(90deg, #9333ea, var(--lavender)); }
-    .skill-percent { font-size: .78rem; color: var(--muted); text-align: right; margin-top: .35rem; }
-
-    /* ── EDUCATION TIMELINE ── */
-    #education .edu-timeline { position: relative; padding-left: 2.5rem; }
-    #education .edu-timeline::before {
-      content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--pink-dark), var(--lavender), transparent);
-      border-radius: 2px;
-    }
-    .edu-item { position: relative; margin-bottom: 2rem; }
-    .edu-item::before { content: '🌸'; position: absolute; left: -2.5rem; top: .15rem; font-size: 1.1rem; line-height: 1; }
-    .edu-card {
-      background: var(--card-bg); backdrop-filter: blur(12px);
-      border-radius: 18px; padding: 1.5rem 1.8rem;
-      border: 1.5px solid rgba(244,167,185,0.3);
-      box-shadow: var(--shadow);
-      transition: transform .3s;
-    }
-    .edu-card:hover { transform: translateX(6px); }
-    .edu-year { display: inline-block; background: var(--pink-light); color: var(--pink-dark); font-size: .78rem; font-weight: 700; padding: .2rem .7rem; border-radius: 6px; margin-bottom: .6rem; letter-spacing: .04em; }
-    .edu-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; color: var(--text); }
-    .edu-card p { font-size: .9rem; color: var(--muted); }
-
-    /* ── PROJECTS ── */
-    #projects .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
-    .proj-card {
-      background: var(--card-bg); backdrop-filter: blur(12px);
-      border-radius: 24px; overflow: hidden;
-      border: 1.5px solid rgba(244,167,185,0.3);
-      box-shadow: var(--shadow);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .proj-card:hover { transform: translateY(-8px); box-shadow: 0 20px 55px rgba(233,30,140,.18); }
-    .proj-thumb { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden; }
-    .proj-thumb::after { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,.15); }
-    .proj-body { padding: 1.5rem; }
-    .proj-body h4 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
-    .proj-body p { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
-    .proj-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
-    .proj-tag { font-size: .74rem; font-weight: 600; padding: .2rem .65rem; border-radius: 6px; background: var(--pink-light); color: var(--pink-dark); }
-    .proj-tag.purple { background: #ede9fe; color: #7c3aed; }
-    .proj-tag.mint   { background: #d1fae5; color: #065f46; }
-    .proj-tag.soon   { background: #fef3c7; color: #b45309; }
-
-    /* ── CONTACT ── */
-    #contact .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; }
-    .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 1rem; }
-    .contact-info p { font-size: .95rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
-    .contact-links { display: flex; flex-direction: column; gap: .75rem; }
-    .contact-link {
-      display: flex; align-items: center; gap: .8rem;
-      text-decoration: none; color: var(--text);
-      background: var(--card-bg); border: 1.5px solid rgba(244,167,185,.3);
-      padding: .75rem 1rem; border-radius: 14px;
-      font-size: .9rem; font-weight: 500;
-      transition: transform .2s, box-shadow .2s, border-color .2s;
-      backdrop-filter: blur(8px);
-    }
-    .contact-link:hover { transform: translateX(6px); border-color: var(--pink-dark); box-shadow: 0 6px 20px rgba(233,30,140,.12); }
-    .contact-link .link-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-    .contact-form {
-      background: var(--card-bg); backdrop-filter: blur(12px);
-      border-radius: 24px; padding: 2rem;
-      border: 1.5px solid rgba(244,167,185,.3);
-      box-shadow: var(--shadow);
-    }
-    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 1.3rem; color: var(--text); }
-    .form-group { margin-bottom: 1.1rem; }
-    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--text); margin-bottom: .35rem; }
-    .form-group input, .form-group textarea {
-      width: 100%; padding: .7rem 1rem;
-      border: 1.5px solid rgba(244,167,185,.4);
-      border-radius: 12px; background: rgba(255,255,255,.7);
-      font-family: 'DM Sans', sans-serif; font-size: .92rem; color: var(--text);
-      outline: none; transition: border-color .2s, box-shadow .2s;
-      resize: none;
-    }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--pink-dark); box-shadow: 0 0 0 3px rgba(233,30,140,.1); }
-    .form-group textarea { height: 100px; }
-    .btn-send {
-      width: 100%; justify-content: center;
-      background: linear-gradient(135deg, var(--pink-dark), #b5179e);
-      color: #fff; box-shadow: 0 6px 20px rgba(233,30,140,.3);
-      font-size: 1rem;
-    }
-    .btn-send:hover { box-shadow: 0 10px 30px rgba(233,30,140,.45); }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: .85rem; color: var(--muted);
-      border-top: 1.5px solid rgba(244,167,185,.3);
-      margin-top: 3rem;
-    }
-    footer span { color: var(--pink-dark); font-weight: 700; }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-    .revealed { opacity: 1; transform: none; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      #hero { flex-direction: column-reverse; gap: 2rem; padding-top: 7rem; text-align: center; }
-      .hero-btns { justify-content: center; }
-      .hero-avatar { width: 240px; height: 240px; }
-      .sticker { font-size: 1.4rem; }
-      .sticker-3 { left: -25px; }
-      #about .about-grid { grid-template-columns: 1fr; }
-      #contact .contact-wrap { grid-template-columns: 1fr; }
-      nav { padding: .9rem 1.2rem; }
-      .nav-links { gap: 1rem; }
-      .nav-links a { font-size: .82rem; }
-    }
-    @media (max-width: 480px) {
-      .hero-name { font-size: 2.4rem; }
-      .sticker { font-size: 1.2rem; }
-      .sticker-1 { top: -10px; left: -8px; }
-      .sticker-2 { bottom: -5px; right: -12px; }
-      .sticker-3 { left: -20px; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- ── BACKGROUND ── -->
-<div class="bg-blobs">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-  <div class="blob blob-4"></div>
-</div>
-
-<!-- ── NAV ── -->
-<nav>
-  <div class="nav-logo">Nuraeni✿</div>
-  <ul class="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">Tentang</a></li>
-    <li><a href="#skills">Keahlian</a></li>
-    <li><a href="#education">Pendidikan</a></li>
-    <li><a href="#projects">Project</a></li>
-    <li><a href="#contact">Kontak</a></li>
-  </ul>
-</nav>
-
-<!-- ── HERO ── -->
-<section id="hero">
-  <div class="hero-text">
-    <div class="hero-badge"><span>✨</span> Mahasiswi Sistem Informasi</div>
-    <h1 class="hero-name">Nuraeni<br><em></em></h1>
-    <p class="hero-nim">NIM: <strong>515241022</strong> &nbsp;·&nbsp; Sistem Informasi</p>
-    <p class="hero-desc">
-      Mahasiswi yang penuh semangat dalam dunia teknologi informasi.
-      Bersemangat belajar, berkreasi, dan menghadirkan solusi digital yang bermakna. 🌸
-    </p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn btn-primary">✦ Lihat Proyek</a>
-      <a href="#contact" class="btn btn-outline">💌 Hubungi Saya</a>
-    </div>
-  </div>
-
-  <div class="hero-avatar">
-    <div class="avatar-ring"></div>
-    <div class="avatar-circle" id="avatarCircle">
-      <img id="avatarImg" class="avatar-photo" src="aen.jpg" alt="Nuraeni" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\"font-size:5rem;\">🌸</div>';" />
-    </div>
-    <div class="avatar-dot dot-1"></div>
-    <div class="avatar-dot dot-2"></div>
-    <div class="avatar-dot dot-3"></div>
-    <!-- ✨ Emoji dengan animasi mengambang yang sudah diperbaiki ✨ -->
-    <span class="sticker sticker-1">🌸</span>
-    <span class="sticker sticker-2">💡</span>
-    <span class="sticker sticker-3">⭐</span>
-  </div>
-</section>
-
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="section-divider"></div>
-  <h2 class="section-title">Tentang <em>Saya</em></h2>
-  <p class="section-sub">Kenalan lebih dekat dengan saya 🌷</p>
-
-  <div class="about-grid reveal">
-    <div class="about-card">
-      <h3>Informasi Diri</h3>
-      <table class="info-table">
-        <tr><td>Nama Lengkap</td><td>Nuraeni</td></tr>
-        <tr><td>NIM</td><td>515241022</td></tr>
-        <tr><td>Program Studi</td><td>Sistem Informasi</td></tr>
-        <tr><td>Status</td><td>Mahasiswa Aktif</td></tr>
-        <tr><td>Asal</td><td>Rangkasbitung</td></tr>
-        <tr><td>Minat</td><td>Teknologi & Inovasi</td></tr>
-       </table>
-    </div>
-    <div class="about-card">
-      <h3>Tentang Saya</h3>
-      <p>
-        Halo! Saya <strong>Nuraeni</strong>, mahasiswi Sistem Informasi yang passionate
-        terhadap dunia teknologi. Saya percaya bahwa teknologi adalah jembatan
-        untuk menyelesaikan berbagai tantangan kehidupan.
-      </p>
-      <br/>
-      <p>
-        Saya senang belajar hal-hal baru, mengeksplorasi teknologi terkini,
-        dan berkolaborasi bersama tim untuk mewujudkan ide-ide kreatif menjadi
-        solusi nyata. Selalu siap tumbuh dan berkembang! 
-      </p>
-    </div>
-  </div>
 </section>
 
 <!-- ── SKILLS ── -->
 <section id="skills">
   <div class="section-divider"></div>
-  <h2 class="section-title">Keahlian <em>& Kompetensi</em></h2>
-  <p class="section-sub">Kemampuan yang sedang saya kembangkan yaitu Sistem Analis</p>
+  <h2 class="section-title">Keahlian <em>Saya</em></h2>
+  <p class="section-sub">Teknologi dan kemampuan yang saya kuasai 💻</p>
 
   <div class="skills-grid reveal">
     <div class="skill-card">
       <div class="skill-card-head">
-        <div class="skill-icon" style="background:#fce4ec;">💻</div>
-        <div><h4>Microsoft Office</h4></div>
+        <div class="skill-icon" style="background:#fce4ec;">🌐</div>
+        <h4>Web Development</h4>
       </div>
-      <p>Saya Mahir menggunakan Microsoft Word, Powerpoint, dan Excel!</p>
-      <div class="skill-bar-wrap"><div class="skill-bar bar-pink" style="width:90%"></div></div>
-      <div class="skill-percent">90 %</div>
+      <p>HTML, CSS, JavaScript untuk membangun antarmuka web yang menarik dan responsif.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar bar-pink" style="width:78%"></div></div>
+      <div class="skill-percent">78%</div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-head">
-        <div class="skill-icon" style="background:#ede9fe;">🎨</div>
-        <div><h4>Public Speaking</h4></div>
+        <div class="skill-icon" style="background:#ede9fe;">🗄️</div>
+        <h4>Database</h4>
       </div>
-      <p>Saya juga bisa berbicara di depan umum dengan lancar, belajar storytelling untuk mengembangkan public speaking!</p>
-      <div class="skill-bar-wrap"><div class="skill-bar bar-purple" style="width:80%"></div></div>
-      <div class="skill-percent">80 %</div>
+      <p>MySQL dan manajemen basis data relasional untuk sistem informasi.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar bar-purple" style="width:70%"></div></div>
+      <div class="skill-percent">70%</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:#d1fae5;">📊</div>
+        <h4>Analisis Sistem</h4>
+      </div>
+      <p>Analisis kebutuhan dan perancangan sistem informasi yang efektif.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar bar-pink" style="width:75%"></div></div>
+      <div class="skill-percent">75%</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:#fef3c7;">🎤</div>
+        <h4>Public Speaking</h4>
+      </div>
+      <p>Kemampuan berbicara di depan umum dan menyampaikan presentasi dengan percaya diri.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar bar-orange" style="width:80%"></div></div>
+      <div class="skill-percent">80%</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-card-head">
+        <div class="skill-icon" style="background:#dbeafe;">📝</div>
+        <h4>Microsoft Office</h4>
+      </div>
+      <p>Menguasai Word, Excel, PowerPoint untuk keperluan dokumentasi dan presentasi profesional.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar bar-blue" style="width:90%"></div></div>
+      <div class="skill-percent">90%</div>
     </div>
   </div>
 </section>
 
-<!-- ── EDUCATION TIMELINE DENGAN URUTAN YANG BENAR ── -->
+<!-- ── EDUCATION ── -->
 <section id="education">
   <div class="section-divider"></div>
   <h2 class="section-title">Riwayat <em>Pendidikan</em></h2>
-  <p class="section-sub">Perjalanan akademik saya dari dasar hingga perguruan tinggi 🌱</p>
+  <p class="section-sub">Perjalanan akademik saya 🎓</p>
 
   <div class="edu-timeline reveal">
     <div class="edu-item">
       <div class="edu-card">
-        <span class="edu-year">2012 — 2018</span>
-        <h4>SD Negeri 1 Bojong Leles</h4>
-        <p>Menyelesaikan pendidikan dasar dengan fondasi yang kuat dan mulai mengenal dunia literasi & numerasi.</p>
+        <span class="edu-year">2024 — Sekarang</span>
+        <h4>Universitas La Tansa Mashiro — Sistem Informasi</h4>
+        <p>Menempuh pendidikan S1 Sistem Informasi, berfokus pada pengembangan teknologi dan solusi digital.</p>
       </div>
     </div>
-    <div class="edu-item">
-      <div class="edu-card">
-        <span class="edu-year">2018 — 2021</span>
-        <h4>SMP Negeri 2 Cibadak</h4>
-        <p>Masa remaja yang penuh pengalaman, aktif dalam kegiatan ekstrakurikuler dan mulai tertarik pada teknologi & desain.</p>
-      </div>
-    </div>
+
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2021 — 2024</span>
-        <h4>SMK Negeri 1 Rangkasbitung — DKV (Desain Komunikasi Visual)</h4>
-        <p>Mendalami dunia desain grafis, tipografi, ilustrasi, dan branding. Memperkuat kreativitas serta visual thinking yang berguna dalam dunia digital.</p>
+        <h4>SMKN 1 Rangkasbitung — Desain Komunikasi Visual (DKV)</h4>
+        <p>Menyelesaikan pendidikan kejuruan dengan spesialisasi di bidang desain grafis dan komunikasi visual.</p>
       </div>
     </div>
+
     <div class="edu-item">
       <div class="edu-card">
-        <span class="edu-year">2024 — Sekarang</span>
-        <h4>Sistem Informasi</h4>
-        <p>Universitas La Tansa Mashiro — Aktif menjalani perkuliahan, menggabungkan ilmu desain dengan teknologi informasi untuk solusi masa depan.</p>
+        <span class="edu-year">2018 — 2021</span>
+        <h4>SMPN 2 Cibadak</h4>
+        <p>Menyelesaikan pendidikan menengah pertama dengan berbagai prestasi akademik dan non-akademik.</p>
       </div>
     </div>
+
     <div class="edu-item">
       <div class="edu-card">
-        <span class="edu-year">Sertifikasi & Pelatihan</span>
-        <h4>Sertifikasi (Segera Update)</h4>
-        <p>Belum aku update, sibuk kuliah dan eksplorasi project. Tapi antusias untuk mengikuti workshop & bootcamp ✨</p>
+        <span class="edu-year">2012 — 2018</span>
+        <h4>SDN 1 Bojong Leles</h4>
+        <p>Membangun fondasi pendidikan dasar dengan semangat belajar yang tinggi.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── MINI PROJECT ── -->
+<!-- ── PROJECTS ── -->
 <section id="projects">
   <div class="section-divider"></div>
-  <h2 class="section-title">Mini <em>Project</em></h2>
-  <p class="section-sub">Project ringan yang pernah aku buat — mudah dijelaskan & seru! 🚀</p>
+  <h2 class="section-title">Proyek <em>Saya</em></h2>
+  <p class="section-sub">Karya dan kreasi yang pernah saya buat 🚀</p>
 
   <div class="proj-grid reveal">
     <div class="proj-card">
-      <div class="proj-thumb" style="background: #fce4ec;">📊</div>
+      <div class="proj-thumb" style="background: linear-gradient(135deg,#fce4ec,#f8bbd0);">🌸</div>
       <div class="proj-body">
-        <h4>Sistem Kasir Sederhana (Excel)</h4>
-        <p>Membuat form transaksi sederhana dengan Excel menggunakan fungsi SUM, IF, dan format bersyarat. Bisa menghitung total belanja & kembalian.</p>
+        <h4>Website Portofolio</h4>
+        <p>Website portofolio pribadi dengan desain modern, animasi halus, dan tampilan responsif.</p>
         <div class="proj-tags">
-          <span class="proj-tag">Excel</span>
-          <span class="proj-tag">Rumus Dasar</span>
+          <span class="proj-tag">HTML</span>
+          <span class="proj-tag">CSS</span>
+          <span class="proj-tag purple">JavaScript</span>
         </div>
       </div>
     </div>
+
     <div class="proj-card">
-      <div class="proj-thumb" style="background: #ede9fe;">📇</div>
+      <div class="proj-thumb" style="background: linear-gradient(135deg,#ede9fe,#ddd6fe);">📊</div>
       <div class="proj-body">
-        <h4>Portofolio Digital (HTML/CSS)</h4>
-        <p>Page portofolio yang aku buat di github, hanya menggunakan HTML dan CSS! Responsif dan eye-catching.</p>
+        <h4>Sistem Informasi</h4>
+        <p>Proyek sistem informasi berbasis web untuk manajemen data yang efisien.</p>
         <div class="proj-tags">
-          <span class="proj-tag purple">HTML</span>
-          <span class="proj-tag purple">CSS</span>
+          <span class="proj-tag purple">PHP</span>
+          <span class="proj-tag mint">MySQL</span>
+          <span class="proj-tag">Bootstrap</span>
         </div>
       </div>
     </div>
+
     <div class="proj-card">
-      <div class="proj-thumb" style="background: #d1fae5;">📋</div>
+      <div class="proj-thumb" style="background: linear-gradient(135deg:#fef3c7,#fde68a);">📋</div>
       <div class="proj-body">
-        <h4>Survey Kesiapan Transformasi Digital</h4>
-        <p>Mengolah data survei mahasiswa hingga kaprodi tentang kesiapan transformasi digital. Tools: Google Form.</p>
+        <h4>Survey Kesiapan Transformasi Digital (DRA)</h4>
+        <p>Mini project mewawancarai mahasiswa dari satu fakultas hingga ke tingkat Dekan untuk mengukur kesiapan transformasi digital.</p>
         <div class="proj-tags">
-          <span class="proj-tag mint">Google Form</span>
-          <span class="proj-tag mint">Data Analisis</span>
+          <span class="proj-tag orange">Research</span>
+          <span class="proj-tag purple">Interview</span>
+          <span class="proj-tag mint">Analysis</span>
         </div>
       </div>
     </div>
+
     <div class="proj-card">
-      <div class="proj-thumb" style="background: #fef3c7;">✅</div>
+      <div class="proj-thumb" style="background: linear-gradient(135deg,#d1fae5,#a7f3d0);">💡</div>
       <div class="proj-body">
-        <h4>To-Do List</h4>
-        <p>Aplikasi daftar tugas sederhana dengan HTML/CSS/JS (localStorage). Bisa tambah, centang selesai, dan hapus tugas.</p>
+        <h4>Proyek Inovasi</h4>
+        <p>Ide dan inovasi digital yang sedang dalam pengembangan untuk masa depan.</p>
         <div class="proj-tags">
-          <span class="proj-tag soon">JavaScript</span>
-          <span class="proj-tag soon">LocalStorage</span>
+          <span class="proj-tag soon">Coming Soon</span>
         </div>
       </div>
     </div>
@@ -862,121 +671,66 @@ footer span { color: var(--pink-dark); font-weight: 700; }
 <!-- ── CONTACT ── -->
 <section id="contact">
   <div class="section-divider"></div>
-  <h2 class="section-title">Mari <em>Terhubung!</em></h2>
-  <p class="section-sub">Jangan ragu untuk menghubungi saya 💌</p>
+  <h2 class="section-title">Hubungi <em>Saya</em></h2>
+  <p class="section-sub">Mari terhubung dan berkolaborasi! 💌</p>
 
   <div class="contact-wrap reveal">
     <div class="contact-info">
-      <h3>Hubungi Saya 🌸</h3>
-      <p>Saya terbuka untuk diskusi, kolaborasi, atau sekadar berbagi cerita. Silakan hubungi saya melalui platform di bawah ini!</p>
+      <h3>Ayo Berkenalan!</h3>
+      <p>Saya terbuka untuk diskusi, kolaborasi, atau sekadar bertukar cerita seputar teknologi dan inovasi.</p>
       <div class="contact-links">
         <a href="mailto:aenafjan@gmail.com" class="contact-link">
           <div class="link-icon" style="background:#fce4ec;">📧</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">Email</div><div>aenafjan@gmail.com</div></div>
+          aenafjan@gmail.com
         </a>
-        <a href="#" class="contact-link">
+        <a href="https://linkedin.com/in/nuraeni" target="_blank" class="contact-link">
           <div class="link-icon" style="background:#ede9fe;">💼</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">LinkedIn</div><div>Nuraeni</div></div>
+          LinkedIn — Nuraeni
         </a>
-        <a href="#" class="contact-link">
+        <a href="https://nuraeniafjan.github.io" target="_blank" class="contact-link">
           <div class="link-icon" style="background:#d1fae5;">🐙</div>
-          <div><div style="font-size:.8rem;color:var(--muted)">GitHub</div><div>github.com/nuraeni</div></div>
+          GitHub — nuraeniafjan.github.io
         </a>
       </div>
     </div>
 
     <div class="contact-form">
-      <h3>✉️ Kirim Pesan</h3>
+      <h3>Kirim Pesan 🌸</h3>
       <div class="form-group">
-        <label>Nama Kamu</label>
-        <input type="text" placeholder="Masukkan nama kamu..."/>
+        <label>Nama</label>
+        <input type="text" placeholder="Nama kamu..." />
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input type="email" placeholder="email@contoh.com"/>
-      </div>
-      <div class="form-group">
-        <label>Subjek</label>
-        <input type="text" placeholder="Topik pesan..."/>
+        <input type="email" placeholder="email@contoh.com" />
       </div>
       <div class="form-group">
         <label>Pesan</label>
-        <textarea placeholder="Tuliskan pesanmu di sini... 🌸"></textarea>
+        <textarea placeholder="Tuliskan pesanmu di sini..."></textarea>
       </div>
-      <button class="btn btn-send" onclick="handleSend()">💌 Kirim Pesan</button>
+      <button class="btn btn-send btn-primary">💌 Kirim Pesan</button>
     </div>
   </div>
 </section>
 
 <!-- ── FOOTER ── -->
 <footer>
-  <p>Made with <span>♥</span> by <span>Nuraeni</span> · Sistem Informasi · 2026</p>
-  <p style="margin-top:.4rem; font-size:.8rem;">✨ Portofolio ini akan terus diperbarui seiring perjalanan akademik saya ✨</p>
+  <p>Dibuat dengan <span>💖</span> oleh <span>Nuraeni</span> · Sistem Informasi · 2024</p>
 </footer>
 
 <script>
-  const PHOTO_URL = "aen.jpg";
-  (function() {
-    const img = document.getElementById('avatarImg');
-    if (PHOTO_URL && PHOTO_URL.trim() !== "") {
-      img.src = PHOTO_URL;
-    }
-  })();
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
+  // ── SCROLL REVEAL ──
   const observer = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
+    entries.forEach(e => {
       if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('revealed'), i * 80);
+        e.target.classList.add('revealed');
         observer.unobserve(e.target);
       }
     });
   }, { threshold: 0.12 });
-  reveals.forEach(r => observer.observe(r));
 
-  // Animate skill bars on scroll
-  const skillBars = document.querySelectorAll('.skill-bar');
-  const barObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const w = e.target.style.width;
-        e.target.style.width = '0%';
-        setTimeout(() => { e.target.style.width = w; e.target.style.transition = 'width 1s ease'; }, 200);
-        barObserver.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  skillBars.forEach(b => barObserver.observe(b));
-
-  // Send button
-  function handleSend() {
-    const btn = document.querySelector('.btn-send');
-    btn.textContent = '✅ Terkirim!';
-    btn.style.background = 'linear-gradient(135deg, #059669, #34d399)';
-    setTimeout(() => {
-      btn.textContent = '💌 Kirim Pesan';
-      btn.style.background = '';
-    }, 2500);
-  }
-
-  // Active nav highlight
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      const href = a.getAttribute('href');
-      if (href === '#' + current) {
-        a.style.color = 'var(--pink-dark)';
-      } else {
-        a.style.color = '';
-      }
-    });
-  });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
