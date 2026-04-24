@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio — Nuraeni</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=Pacifico&display=swap" rel="stylesheet"/>
@@ -161,25 +161,58 @@
       border-radius: 50%;
       display: block;
     }
-    .avatar-emoji { font-size: 10rem; user-select: none; }
 
-    .avatar-dot { position: absolute; border-radius: 50%; background: var(--pink-dark); border: 3px solid #fff; }
+    /* ✨ ANIMASI MENGAMBANG UNTUK STICKER EMOJI - FIXED ✨ */
+    .sticker {
+      position: absolute;
+      font-size: 2rem;
+      animation: floatEmoji 3s ease-in-out infinite alternate;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.15));
+      pointer-events: none;
+      z-index: 10;
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+    .sticker-1 {
+      top: -15px;
+      left: -10px;
+      animation-delay: 0s;
+      animation-duration: 2.5s;
+    }
+    .sticker-2 {
+      bottom: -10px;
+      right: -20px;
+      animation-delay: 0.5s;
+      animation-duration: 3s;
+    }
+    /* 🔧 PERBAIKAN: Ganti transform dengan margin-top untuk centering vertikal */
+    .sticker-3 {
+      top: 50%;
+      left: -35px;
+      margin-top: -1rem; /* Setengah dari font-size 2rem untuk center vertikal */
+      animation-delay: 1s;
+      animation-duration: 3.5s;
+    }
+    @keyframes floatEmoji {
+      0% {
+        transform: translateY(0) rotate(-8deg);
+      }
+      100% {
+        transform: translateY(-18px) rotate(8deg);
+      }
+    }
+
+    /* Titik-titik dekoratif di avatar */
+    .avatar-dot { 
+      position: absolute; 
+      border-radius: 50%; 
+      background: var(--pink-dark); 
+      border: 3px solid #fff;
+      z-index: 5;
+    }
     .dot-1 { width:22px; height:22px; top:18px; right:28px; }
     .dot-2 { width:16px; height:16px; bottom:30px; left:20px; background: var(--lavender); }
     .dot-3 { width:12px; height:12px; top:50%; right:4px; background: var(--mint); }
-
-    .sticker {
-      position: absolute; font-size: 1.6rem;
-      animation: stickerFloat 4s ease-in-out infinite alternate;
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,.12));
-    }
-    .sticker-1 { top: -10px; left: 0; animation-delay: 0s; }
-    .sticker-2 { bottom: 20px; right: -10px; animation-delay: 1.5s; }
-    .sticker-3 { top: 50%; left: -30px; transform: translateY(-50%); animation-delay: 3s; }
-    @keyframes stickerFloat {
-      from { transform: translateY(0) rotate(-5deg); }
-      to   { transform: translateY(-12px) rotate(5deg); }
-    }
 
     /* ── SECTION TITLE ── */
     .section-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--text); margin-bottom: .5rem; }
@@ -229,7 +262,7 @@
     .bar-purple { background: linear-gradient(90deg, #9333ea, var(--lavender)); }
     .skill-percent { font-size: .78rem; color: var(--muted); text-align: right; margin-top: .35rem; }
 
-    /* ── EDUCATION TIMELINE YANG DIPERBAIKI ── */
+    /* ── EDUCATION TIMELINE ── */
     #education .edu-timeline { position: relative; padding-left: 2.5rem; }
     #education .edu-timeline::before {
       content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
@@ -251,7 +284,7 @@
     .edu-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: .2rem; color: var(--text); }
     .edu-card p { font-size: .9rem; color: var(--muted); }
 
-    /* ── PROJECTS (MINI PROJECT) ── */
+    /* ── PROJECTS ── */
     #projects .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.8rem; }
     .proj-card {
       background: var(--card-bg); backdrop-filter: blur(12px);
@@ -338,6 +371,8 @@
       #hero { flex-direction: column-reverse; gap: 2rem; padding-top: 7rem; text-align: center; }
       .hero-btns { justify-content: center; }
       .hero-avatar { width: 240px; height: 240px; }
+      .sticker { font-size: 1.4rem; }
+      .sticker-3 { left: -25px; }
       #about .about-grid { grid-template-columns: 1fr; }
       #contact .contact-wrap { grid-template-columns: 1fr; }
       nav { padding: .9rem 1.2rem; }
@@ -346,6 +381,10 @@
     }
     @media (max-width: 480px) {
       .hero-name { font-size: 2.4rem; }
+      .sticker { font-size: 1.2rem; }
+      .sticker-1 { top: -10px; left: -8px; }
+      .sticker-2 { bottom: -5px; right: -12px; }
+      .sticker-3 { left: -20px; }
     }
   </style>
 </head>
@@ -391,11 +430,12 @@
   <div class="hero-avatar">
     <div class="avatar-ring"></div>
     <div class="avatar-circle" id="avatarCircle">
-      <img id="avatarImg" class="avatar-photo" src="aen.jpg" alt="aen" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\"font-size:5rem;\"></div>
+      <img id="avatarImg" class="avatar-photo" src="aen.jpg" alt="Nuraeni" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\"font-size:5rem;\">🌸</div>';" />
     </div>
     <div class="avatar-dot dot-1"></div>
     <div class="avatar-dot dot-2"></div>
     <div class="avatar-dot dot-3"></div>
+    <!-- ✨ Emoji dengan animasi mengambang yang sudah diperbaiki ✨ -->
     <span class="sticker sticker-1">🌸</span>
     <span class="sticker sticker-2">💡</span>
     <span class="sticker sticker-3">⭐</span>
@@ -418,7 +458,7 @@
         <tr><td>Status</td><td>Mahasiswa Aktif</td></tr>
         <tr><td>Asal</td><td>Rangkasbitung</td></tr>
         <tr><td>Minat</td><td>Teknologi & Inovasi</td></tr>
-      </table>
+       </table>
     </div>
     <div class="about-card">
       <h3>Tentang Saya</h3>
@@ -458,21 +498,20 @@
         <div class="skill-icon" style="background:#ede9fe;">🎨</div>
         <div><h4>Public Speaking</h4></div>
       </div>
-      <p>Selain Microsoft Saya Juga Bisa lohh berbicara didepan umum secara lancar, yaa saya belajar storytelling juga untuk mengembangkan public speaking saya!</p>
+      <p>Saya juga bisa berbicara di depan umum dengan lancar, belajar storytelling untuk mengembangkan public speaking!</p>
       <div class="skill-bar-wrap"><div class="skill-bar bar-purple" style="width:80%"></div></div>
       <div class="skill-percent">80 %</div>
     </div>
   </div>
 </section>
 
-<!-- ── EDUCATION (TIMELINE DENGAN URUTAN YANG BENAR: SD → SMP → SMK → KULIAH) ── -->
+<!-- ── EDUCATION TIMELINE DENGAN URUTAN YANG BENAR ── -->
 <section id="education">
   <div class="section-divider"></div>
   <h2 class="section-title">Riwayat <em>Pendidikan</em></h2>
   <p class="section-sub">Perjalanan akademik saya dari dasar hingga perguruan tinggi 🌱</p>
 
   <div class="edu-timeline reveal">
-    <!-- SDN 1 Bojong Leles -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2012 — 2018</span>
@@ -480,8 +519,6 @@
         <p>Menyelesaikan pendidikan dasar dengan fondasi yang kuat dan mulai mengenal dunia literasi & numerasi.</p>
       </div>
     </div>
-
-    <!-- SMPN 2 Cibadak -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2018 — 2021</span>
@@ -489,8 +526,6 @@
         <p>Masa remaja yang penuh pengalaman, aktif dalam kegiatan ekstrakurikuler dan mulai tertarik pada teknologi & desain.</p>
       </div>
     </div>
-
-    <!-- SMKN 1 Rangkasbitung - Jurusan DKV (Desain Komunikasi Visual) -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2021 — 2024</span>
@@ -498,8 +533,6 @@
         <p>Mendalami dunia desain grafis, tipografi, ilustrasi, dan branding. Memperkuat kreativitas serta visual thinking yang berguna dalam dunia digital.</p>
       </div>
     </div>
-
-    <!-- Universitas La Tansa Mashiro -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">2024 — Sekarang</span>
@@ -507,8 +540,6 @@
         <p>Universitas La Tansa Mashiro — Aktif menjalani perkuliahan, menggabungkan ilmu desain dengan teknologi informasi untuk solusi masa depan.</p>
       </div>
     </div>
-
-    <!-- Sertifikasi & pelatihan -->
     <div class="edu-item">
       <div class="edu-card">
         <span class="edu-year">Sertifikasi & Pelatihan</span>
@@ -530,7 +561,7 @@
       <div class="proj-thumb" style="background: #fce4ec;">📊</div>
       <div class="proj-body">
         <h4>Sistem Kasir Sederhana (Excel)</h4>
-        <p>Membuat form transaksi sederhana dengan Excel menggunakan fungsi SUM, IF, dan format bersyarat. Bisa menghitung total belanja & kembalian. Cocok untuk mini market UMKM.</p>
+        <p>Membuat form transaksi sederhana dengan Excel menggunakan fungsi SUM, IF, dan format bersyarat. Bisa menghitung total belanja & kembalian.</p>
         <div class="proj-tags">
           <span class="proj-tag">Excel</span>
           <span class="proj-tag">Rumus Dasar</span>
@@ -541,7 +572,7 @@
       <div class="proj-thumb" style="background: #ede9fe;">📇</div>
       <div class="proj-body">
         <h4>Portofolio Digital (HTML/CSS)</h4>
-        <p>Page portofolio yang aku buat di github dan hanya menggunakan HTML dan CSS saja lohh! Responsif dan eye-catching.</p>
+        <p>Page portofolio yang aku buat di github, hanya menggunakan HTML dan CSS! Responsif dan eye-catching.</p>
         <div class="proj-tags">
           <span class="proj-tag purple">HTML</span>
           <span class="proj-tag purple">CSS</span>
@@ -552,7 +583,7 @@
       <div class="proj-thumb" style="background: #d1fae5;">📋</div>
       <div class="proj-body">
         <h4>Survey Kesiapan Transformasi Digital</h4>
-        <p>Mengolah data survei 1 Fakultas, 2 Program studi mulai dari Mahasiswa hingga kaprodi tentang kesiapan transformasi digital. Tools: Google Form.</p>
+        <p>Mengolah data survei mahasiswa hingga kaprodi tentang kesiapan transformasi digital. Tools: Google Form.</p>
         <div class="proj-tags">
           <span class="proj-tag mint">Google Form</span>
           <span class="proj-tag mint">Data Analisis</span>
@@ -563,7 +594,7 @@
       <div class="proj-thumb" style="background: #fef3c7;">✅</div>
       <div class="proj-body">
         <h4>To-Do List</h4>
-        <p>Aplikasi daftar tugas sederhana dengan HTML/CSS/JS (localStorage). Bisa tambah, centang selesai, dan hapus. Cocok buat yang lagi belajar.</p>
+        <p>Aplikasi daftar tugas sederhana dengan HTML/CSS/JS (localStorage). Bisa tambah, centang selesai, dan hapus tugas.</p>
         <div class="proj-tags">
           <span class="proj-tag soon">JavaScript</span>
           <span class="proj-tag soon">LocalStorage</span>
